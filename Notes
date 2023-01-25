@@ -7,3 +7,6 @@ StorageClass >> PV >> PVC
   
  --> To login to POD
   # kubectl exec --stdin --tty $PodName /bin/bash 
+ 
+ --> Data Storage location
+  # cd /mnt/azure/
