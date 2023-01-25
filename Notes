@@ -2,3 +2,8 @@ StorageClass >> PV >> PVC
 
 # Storage Class
   -- defines how and 
+  
+  
+  
+  
+  # kubectl exec --stdin --tty $PodName /bin/bash 
