@@ -1,1 +1,9 @@
 
+--> Create a storage account >> Create a file share service >> 
+
+Storage Account step
+  # az storage account create -n STORAGE_ACCOUNT_NAME -g RESOURCE_GROUP -l LOCATION --sku Standard_LRS
+File Share step
+  # export AZURE_STORAGE_CONNECTION_STRING=$(az storage account show-connection-string -n STORAGE_ACCOUNT_NAME -g RESOURCE_GROUP -o tsv)
+  # az storage share create -n STORAGE_ACCOUNT_NAME --connection-string $AZURE_STORAGE_CONNECTION_STRING
+
