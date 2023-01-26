@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteMany   # ReadWriteOnce, ReadOnlyMany or ReadWriteMany
-  storageClassName: azuredisk-premium-retain
+  storageClassName: sc-jk
   resources:
     requests:
       storage: 150Mb
