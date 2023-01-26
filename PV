@@ -1,10 +1,16 @@
-
---> Create a storage account >> Create a file share service >> 
-
-Storage Account step -->
-  # az storage account create -nanme $(STORAGE_ACCOUNT_NAME) -resource-group $(RESOURCE_GROUP) -location $(LOCATION) --sku Standard_LRS
-
-File Share step -->
-  # export AZURE_STORAGE_CONNECTION_STRING = $(az storage account show-connection-string -n STORAGE_ACCOUNT_NAME -g RESOURCE_GROUP -o tsv)
-  # az storage share create --name $(STORAGE_ACCOUNT_NAME) --quots $(DiskSize) --connection-string $(AZURE_STORAGE_CONNECTION_STRING)
-
+apiVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  name: "azpv"
+spec:
+  capacity:
+    storage: "8Gi"
+  accessModes:
+    - "ReadWriteOnce"
+  azureFile:
+    secretName: azure-secret
+    shareName: azftest
+    readOnly: false
+  mountOptions:
+    - dir_mode=0777
+    - file_mode=0777
