@@ -22,4 +22,4 @@ File Share step -->
   # export AZURE_STORAGE_CONNECTION_STRING = $(az storage account show-connection-string -n STORAGE_ACCOUNT_NAME -g RESOURCE_GROUP -o tsv)
   # az storage share create --name $(STORAGE_ACCOUNT_NAME) --quots $(DiskSize) --connection-string $(AZURE_STORAGE_CONNECTION_STRING)
 
-
+kubectl exec -i -t my-pod --container main-app -- /bin/bash
