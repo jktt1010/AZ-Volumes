@@ -17,7 +17,7 @@ spec:
       - image: nginx
         name: container-0 
         volumeMounts: 
-        - mountPath: /mnt/PipeTest/T12022
+        - mountPath: /mnt/PipeTest/PrintT12022
           name: hostpath-example 
       imagePullSecrets:
         - name: default-secret
@@ -25,4 +25,4 @@ spec:
       volumes: 
       - name: hostpath-example 
         hostPath: 
-          path: /mnt/PipeTest
+          path: \\10.0.0.4\PrintT12022
