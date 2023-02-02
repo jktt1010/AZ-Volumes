@@ -14,10 +14,10 @@ spec:
         app: hostpath-pod-example 
     spec: 
       containers: 
-      - image: nginx
-        name: container-0 
+      - image: mcr.microsoft.com/windows/nanoserver:1809
+        name: wincontainer
         volumeMounts: 
-        - mountPath: /mnt/PipeTest/PrintT12022
+        - mountPath: \10.0.0.4\PrintT12022
           name: hostpath-example 
       imagePullSecrets:
         - name: default-secret
