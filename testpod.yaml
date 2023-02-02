@@ -15,7 +15,7 @@ spec:
     spec: 
       containers: 
       - image: mcr.microsoft.com/windows:ltsc2019
-        name: wincontainer
+        name: win
         volumeMounts: 
         - mountPath: \\10.0.0.4\PrintT12022
           name: hostpath-example 
