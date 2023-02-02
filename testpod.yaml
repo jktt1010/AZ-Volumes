@@ -1,17 +1,17 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: htestpod 
+  name: win 
   namespace: default 
 spec: 
   replicas: 1 
   selector: 
     matchLabels: 
-      app: test-pod
+      app: win
   template: 
     metadata: 
       labels: 
-        app: Test=Pod
+        app: win
     spec: 
       containers: 
       - image: mcr.microsoft.com/windows:ltsc2019
