@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: datadisk-jk-pod
+spec:
+  containers:
+  - image: mongo
+    name: mongodb
+    volumeMounts:
+    - name: datadisk-jk
+      mountPath: /mnt/PipeTest
+  volumes:
+  - name: datadisk-jk
+    persistentVolumeClaim:
+      claimName: datadisk-jk
