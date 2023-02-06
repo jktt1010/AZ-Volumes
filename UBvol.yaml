@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: datadisk-jk 
+spec:
+  containers:
+  - image: ubuntu
+    name: ubuntu
+    volumeMounts:
+    - name: datadisk-jk
+      mountPath: /datadisk-jk/PrintT12022
+  volumes:
+  - name: datadisk-jk
+    persistentVolumeClaim:
+      claimName: datadisk-jk
