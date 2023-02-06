@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: datadisk-jk-pvc
+  name: datadisk-jk-pod
 spec:
   containers:
   - image: mongo
     name: mongodb
     volumeMounts:
     - name: datadisk-jk
-      mountPath: /T12022/
+      mountPath: /mnt/PipeTest
   volumes:
   - name: datadisk-jk
     persistentVolumeClaim:
