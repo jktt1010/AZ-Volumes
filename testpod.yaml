@@ -12,9 +12,11 @@ spec:
     metadata: 
       labels: 
         app: win
-    spec: 
-      containers: 
-      - image: mcr.microsoft.com/windows:ltsc2019
+    containers:
+      - name: windowswebserver
+        image: mcr.microsoft.com/windows/servercore:ltsc2019
+        command:
+        - powershell.exe
         name: win
         volumeMounts: 
         - mountPath: \\10.0.0.4\PrintT12022
