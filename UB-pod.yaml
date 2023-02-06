@@ -8,7 +8,7 @@ spec:
     name: mongodb
     volumeMounts:
     - name: datadisk-jk
-      mountPath: /datadisk-jk/PipeTest
+      mountPath: /mnt/PipeTest
   volumes:
   - name: datadisk-jk
     persistentVolumeClaim:
